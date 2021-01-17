@@ -19,7 +19,6 @@ public class BookController {
 	@GetMapping("/")
 	public ResponseEntity<Object> listBooks(){
 		List<Libro> libros = service.listAll();
-		//System.out.print(libros.get(0).);
 		return new ResponseEntity<>(libros, HttpStatus.ACCEPTED);
 	}
 }
